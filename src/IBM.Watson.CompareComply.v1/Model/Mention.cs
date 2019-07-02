@@ -15,32 +15,26 @@
 *
 */
 
-using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace IBM.Watson.NaturalLanguageUnderstanding.v1.Model
+namespace IBM.Watson.CompareComply.v1.Model
 {
     /// <summary>
-    /// EntityMention.
+    /// A mention of a party.
     /// </summary>
-    public class EntityMention
+    public class Mention
     {
         /// <summary>
-        /// Entity mention text.
+        /// The name of the party.
         /// </summary>
         [JsonProperty("text", NullValueHandling = NullValueHandling.Ignore)]
         public string Text { get; set; }
         /// <summary>
-        /// Character offsets indicating the beginning and end of the mention in the analyzed text.
+        /// The numeric location of the identified element in the document, represented with two integers labeled
+        /// `begin` and `end`.
         /// </summary>
         [JsonProperty("location", NullValueHandling = NullValueHandling.Ignore)]
-        public List<long?> Location { get; set; }
-        /// <summary>
-        /// For custom models requests only: confidence in the entity identification from 0 to 1. Higher values indicate
-        /// higher confidence.
-        /// </summary>
-        [JsonProperty("confidence", NullValueHandling = NullValueHandling.Ignore)]
-        public double? Confidence { get; set; }
+        public Location Location { get; set; }
     }
 
 }

@@ -59,16 +59,22 @@ namespace IBM.Watson.CompareComply.v1.Model
         [JsonProperty("column_headers", NullValueHandling = NullValueHandling.Ignore)]
         public List<ColumnHeaders> ColumnHeaders { get; set; }
         /// <summary>
-        /// An array of key-value pairs identified in the current table.
-        /// </summary>
-        [JsonProperty("key_value_pairs", NullValueHandling = NullValueHandling.Ignore)]
-        public List<KeyValuePair> KeyValuePairs { get; set; }
-        /// <summary>
         /// An array of cells that are neither table header nor column header nor row header cells, of the current table
         /// with corresponding row and column header associations.
         /// </summary>
         [JsonProperty("body_cells", NullValueHandling = NullValueHandling.Ignore)]
         public List<BodyCells> BodyCells { get; set; }
+        /// <summary>
+        /// An array of objects that list text that is related to the table contents and that precedes or follows the
+        /// current table.
+        /// </summary>
+        [JsonProperty("contexts", NullValueHandling = NullValueHandling.Ignore)]
+        public List<Contexts> Contexts { get; set; }
+        /// <summary>
+        /// An array of key-value pairs identified in the current table.
+        /// </summary>
+        [JsonProperty("key_value_pairs", NullValueHandling = NullValueHandling.Ignore)]
+        public List<KeyValuePair> KeyValuePairs { get; set; }
     }
 
 }
